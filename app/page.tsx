@@ -124,10 +124,10 @@ import Footer from '@/components/Footer'
 export default function Page() {
   // 👇 You can edit numbers here (they render as tel: links)
   const POC = [
-    { name: 'Tanisha Chakrabarti', phone: '+91 98765 43210' },
-    { name: 'Souptik Biswas',      phone: '+91 98765 43211' },
+    { name: 'Tanisha Chakrabarti', phone: '+91 90070 65860' },
+    { name: 'Souptik Biswas',      phone: '+91 90622 12729' },
     { name: 'Saheli Deb',          phone: '+91 86172 24294' },
-    { name: 'Anwesha Ghosh',       phone: '+91 98765 43213' },
+    { name: 'Anwesha Ghosh',       phone: '+91 90077 19690' },
   ]
 
   return (
