@@ -2,3 +2,12 @@
 node_modules/
 .next/
 out/
+node_modules/
+.next/
+out/
+dist/
+build/
+.vercel/
+.turbo/
+.env
+.env.*
