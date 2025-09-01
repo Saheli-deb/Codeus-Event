@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center bg-gradient-to-br from-[#2b2410] to-[#574515] text-cream border border-accent px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl font-bold shadow hover:brightness-110 transition-all duration-200 text-sm sm:text-base min-h-[44px];
+  }
+  
+  .btn-mobile {
+    @apply w-full text-center;
+  }
+  
+  .panel-glow { 
+    @apply shadow-[0_0_30px_rgba(212,175,55,0.25)] border border-gold/40; 
+  }
+  
+  /* Mobile-specific utilities */
+  @media (max-width: 640px) {
+    .btn {
+      @apply px-3 py-2 text-sm min-h-[40px];
+    }
+  }
+}

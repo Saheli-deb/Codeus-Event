@@ -1,0 +1,154 @@
+/* Mobile-specific fixes for viewport and boundaries */
+
+/* Prevent black boundaries on mobile */
+@media screen and (max-width: 640px) {
+  /* Root fixes */
+  html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow-x: hidden;
+  }
+  
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Main container fixes */
+  main {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background: transparent;
+  }
+  
+  /* Fix container max widths */
+  .max-w-6xl {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Background fixes */
+  .bg-pan {
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Prevent horizontal overflow */
+  * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  img, video, iframe, svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix grid layouts */
+  .grid {
+    width: 100%;
+  }
+  
+  /* Ensure buttons and inputs are mobile-friendly */
+  button, input, select, textarea {
+    max-width: 100%;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  /* Fix positioning issues */
+  .absolute, .fixed {
+    max-width: 100vw;
+  }
+  
+  /* Container padding adjustments */
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Hero section mobile fixes */
+  .hero-stack {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* SubEvents mobile fixes */
+  #subevents .grid {
+    width: 100%;
+  }
+  
+  /* Register form mobile fixes */
+  .hp-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  @media screen and (max-width: 640px) {
+    body {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .bg-pan {
+      -webkit-transform: translate3d(0,0,0);
+      background-attachment: scroll;
+    }
+  }
+}
+
+/* Android Chrome specific fixes */
+@media screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 1) {
+  .bg-pan {
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+}
+
+/* Small mobile devices (iPhone SE, etc.) */
+@media screen and (max-width: 375px) {
+  .px-4 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .text-lg {
+    font-size: 1rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+}
+
+/* Landscape mobile fixes */
+@media screen and (max-height: 640px) and (orientation: landscape) {
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  .py-8, .py-12 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
