@@ -38,9 +38,9 @@ import MagicalEffects from '@/components/MagicalEffects'
 import AudioController from '@/components/AudioController' // ⬅️ NEW
 
 export const metadata: Metadata = {
-  title: 'Code & Cauldrons — Code & Clause',
+  title: 'The Triwizard Trials',
   description:
-    'Hogwarts-style AI festival featuring Generative AI (HOGGEN), Agentic AI (CODEUS), and No-Code (CODE WHO?).',
+    'A Hogwarts-inspired AI festival featuring Defence Against Dark Prompts (Generative AI), The Chambers of Agents (Agentic AI), and Charms Without Wands (No-Code).',
 }
 
 export const viewport: Viewport = {
